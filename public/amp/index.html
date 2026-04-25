@@ -21,6 +21,10 @@
 
   <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue:wght@400&display=swap" rel="stylesheet">
+
   <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
 
   <script type="application/ld+json">
@@ -36,84 +40,85 @@
 
   <style amp-custom>
     *{box-sizing:border-box}
-    body{font-family:-apple-system,'Segoe UI',Roboto,sans-serif;margin:0;padding:0;background:#120a00;color:#ffedd5;line-height:1.7;-webkit-font-smoothing:antialiased}
+    body{font-family:'Bebas Neue',-apple-system,'Segoe UI',Roboto,sans-serif;margin:0;padding:0;background:#1c1c1c;color:#f0f0f0;line-height:1.7;-webkit-font-smoothing:antialiased}
     a{text-decoration:none;color:inherit}
     .w{max-width:640px;margin:0 auto;padding:0 16px}
 
-    .nav{background:#1e1408;border-bottom:1px solid #2e2010;position:sticky;top:0;z-index:50}
+    .nav{background:#1c1c1ce8;border-bottom:1px solid rgba(245,166,35,.1);position:sticky;top:0;z-index:50}
     .nav .w{display:flex;align-items:center;justify-content:space-between;padding-top:10px;padding-bottom:10px}
-    .logo{display:flex;align-items:center;gap:8px;font-weight:800;font-size:1.05rem;color:#fb923c}
+    .logo{display:flex;align-items:center;gap:8px;font-weight:800;font-size:1.05rem;color:#f5a623}
     .nb{display:flex;gap:6px}
-    .bo{border:1.5px solid #fb923c;color:#fb923c;padding:7px 14px;border-radius:8px;font-size:.75rem;font-weight:700}
-    .bf{background:linear-gradient(135deg,#fb923c,#f97316);color:#120a00;padding:7px 16px;border-radius:8px;font-size:.75rem;font-weight:700;box-shadow:0 2px 12px #fb923c30}
+    .bo{border:1.5px solid #f5a623;color:#f5a623;padding:7px 14px;border-radius:0;font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:2px}
+    .bf{background:#f5a623;color:#1c1c1c;padding:7px 16px;border-radius:0;font-size:.75rem;font-weight:700;box-shadow:0 2px 12px #f5a62335;text-transform:uppercase;letter-spacing:2px}
 
-    .hero{background:linear-gradient(180deg,#1e1408,#120a00);padding:32px 0 24px;text-align:center;position:relative;overflow:hidden}
-    .hero::before{content:'';position:absolute;top:-80px;left:50%;transform:translateX(-50%);width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,#fb923c08,transparent 70%);pointer-events:none}
-    .badge{display:inline-block;padding:4px 12px;border-radius:14px;background:#fb923c12;border:1px solid #fb923c20;font-size:.68rem;font-weight:700;color:#fb923c;margin-bottom:14px}
-    .hero h1{font-size:1.35rem;font-weight:900;color:#fff7ed;line-height:1.2;margin:0 0 10px;padding:0 8px}
-    .hero p{font-size:.82rem;color:#fdba74;margin:0 0 18px;padding:0 8px}
+    .hero{background:#1c1c1c;padding:32px 0 24px;text-align:center;position:relative;overflow:hidden}
+    .hero::before{content:'';position:absolute;top:-80px;left:50%;transform:translateX(-50%);width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,#f5a62308,transparent 70%);pointer-events:none}
+    .badge{display:inline-block;padding:4px 12px;border-radius:0;background:#f5a62312;border:1px solid rgba(245,166,35,.1);font-size:.68rem;font-weight:700;color:#f5a623;margin-bottom:14px;text-transform:uppercase;letter-spacing:4px;font-family:'IBM Plex Sans',sans-serif}
+    .hero h1{font-size:1.6rem;font-weight:900;color:#f0f0f0;line-height:1.05;margin:0 0 10px;padding:0 8px;text-transform:uppercase;letter-spacing:3px}
+    .hero h1 em{font-style:normal;color:#f5a623}
+    .hero p{font-size:.82rem;color:#aaa;margin:0 0 18px;padding:0 8px}
     .hb{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:18px}
-    .hb .p{background:linear-gradient(135deg,#fb923c,#f97316);color:#120a00;padding:11px 24px;border-radius:10px;font-size:.85rem;font-weight:800;display:inline-block}
-    .hb .s{border:1.5px solid #2e2010;color:#fff7ed;padding:10px 24px;border-radius:10px;font-size:.85rem;font-weight:700;display:inline-block}
-    .stats{display:flex;justify-content:center;gap:28px;padding-top:16px;border-top:1px solid #2e2010}
-    .stats .v{font-size:1.2rem;font-weight:900;color:#fb923c;display:block}
-    .stats .l{font-size:.65rem;color:#fdba74;text-transform:uppercase;letter-spacing:1px}
+    .hb .p{background:#f5a623;color:#1c1c1c;padding:11px 24px;border-radius:0;font-size:.85rem;font-weight:800;display:inline-block;text-transform:uppercase;letter-spacing:2px}
+    .hb .s{border:1.5px solid rgba(245,166,35,.1);color:#f0f0f0;padding:10px 24px;border-radius:0;font-size:.85rem;font-weight:700;display:inline-block;text-transform:uppercase;letter-spacing:2px}
+    .stats{display:flex;justify-content:center;gap:28px;padding-top:16px;border-top:1px solid rgba(245,166,35,.1)}
+    .stats .v{font-size:1.2rem;font-weight:900;color:#f5a623;display:block}
+    .stats .l{font-size:.65rem;color:#aaa;text-transform:uppercase;letter-spacing:1px}
 
-    .sec{padding:24px 0;border-bottom:1px solid #2e2010}
+    .sec{padding:24px 0;border-bottom:1px solid rgba(245,166,35,.1)}
     .sec:last-of-type{border-bottom:none}
-    .tag{display:inline-block;padding:3px 10px;border-radius:6px;background:#fb923c10;color:#fb923c;font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:8px}
-    .sec h2{font-size:1.1rem;font-weight:800;color:#fff7ed;margin:0 0 8px}
-    .sec p{font-size:.82rem;color:#ffedd5;line-height:1.8;margin:0 0 10px}
+    .tag{display:inline-block;padding:3px 10px;border-radius:0;background:#f5a62310;color:#f5a623;font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:8px}
+    .sec h2{font-size:1.25rem;font-weight:800;color:#f0f0f0;margin:0 0 8px}
+    .sec p{font-size:.82rem;color:#f0f0f0;line-height:1.8;margin:0 0 10px}
 
-    .fc{display:flex;gap:10px;background:#1e1408;border:1px solid #2e2010;border-radius:10px;padding:14px;margin-bottom:8px}
-    .fc .i{width:36px;height:36px;border-radius:8px;background:#fb923c10;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
-    .fc h3{font-size:.82rem;font-weight:700;color:#fff7ed;margin:0 0 2px}
-    .fc p{font-size:.75rem;color:#fdba74;margin:0}
+    .fc{display:flex;gap:10px;background:#2e2e2e;border:1px solid rgba(245,166,35,.1);border-left:4px solid #f5a623;border-radius:0;padding:14px;margin-bottom:8px}
+    .fc .i{width:36px;height:36px;border-radius:0;background:#f5a62312;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
+    .fc h3{font-size:.82rem;font-weight:700;color:#f0f0f0;margin:0 0 2px}
+    .fc p{font-size:.75rem;color:#aaa;margin:0}
 
-    amp-accordion section{border-bottom:1px solid #2e2010}
+    amp-accordion section{border-bottom:1px solid rgba(245,166,35,.1)}
     amp-accordion section:last-child{border-bottom:none}
     amp-accordion h3{margin:0}
-    .fh{display:flex;justify-content:space-between;align-items:center;width:100%;padding:14px 0;font-size:.82rem;font-weight:600;color:#fff7ed;background:none;border:none;cursor:pointer;font-family:inherit;text-align:left}
-    .ch{width:20px;height:20px;border-radius:5px;background:#1e1408;display:flex;align-items:center;justify-content:center;font-size:.75rem;color:#fdba74;flex-shrink:0}
-    amp-accordion section[expanded] .ch{background:#fb923c;color:#120a00}
+    .fh{display:flex;justify-content:space-between;align-items:center;width:100%;padding:14px 0;font-size:.82rem;font-weight:600;color:#f0f0f0;background:none;border:none;cursor:pointer;font-family:inherit;text-align:left}
+    .ch{width:20px;height:20px;border-radius:0;background:#2e2e2e;display:flex;align-items:center;justify-content:center;font-size:.75rem;color:#f5a623;flex-shrink:0}
+    amp-accordion section[expanded] .ch{background:#f5a623;color:#1c1c1c}
     .fb{padding:0 0 14px}
-    .fb p{font-size:.78rem;color:#ffedd5;line-height:1.75;margin:0}
+    .fb p{font-size:.78rem;color:#aaa;line-height:1.75;margin:0}
 
-    .cta{background:linear-gradient(135deg,#1e1408,#120a00);padding:32px 0;text-align:center;border-top:1px solid #2e2010}
-    .cta h2{font-size:1.1rem;font-weight:800;color:#fff7ed;margin:0 0 6px}
-    .cta h2 span{color:#fb923c}
-    .cta p{font-size:.8rem;color:#fdba74;margin:0 0 16px}
-    .cta .cb{background:linear-gradient(135deg,#fb923c,#f97316);color:#120a00;padding:12px 28px;border-radius:10px;font-size:.88rem;font-weight:800;display:inline-block}
+    .cta{background:#f5a623;padding:32px 0;text-align:center;border-top:1px solid rgba(245,166,35,.1)}
+    .cta h2{font-size:1.25rem;font-weight:800;color:#1c1c1c;margin:0 0 6px}
+    .cta h2 span{color:#1c1c1c}
+    .cta p{font-size:.8rem;color:#1c1c1c;opacity:.85;margin:0 0 16px}
+    .cta .cb{background:#fff;color:#f5a623;padding:12px 28px;border-radius:0;font-size:.88rem;font-weight:800;display:inline-block;text-transform:uppercase;letter-spacing:2px}
 
-    footer{background:#1e1408;padding:18px 0;text-align:center;color:#fdba74;font-size:.68rem;border-top:1px solid #2e2010}
-    footer .fb2{font-weight:800;color:#fb923c;font-size:.85rem;margin-bottom:4px}
+    footer{background:#1c1c1c;padding:18px 0;text-align:center;color:#aaa;font-size:.68rem;border-top:1px solid rgba(245,166,35,.1)}
+    footer .fb2{font-weight:800;color:#f5a623;font-size:.85rem;margin-bottom:4px}
   </style>
 </head>
 <body>
 
   <nav class="nav"><div class="w">
-    <a href="https://pubgtotolinkalternatif.com" class="logo">
+    <a href="https://pubgtotolinkalternatif.com/" class="logo" title="PUBGTOTO - Beranda">
       <amp-img src="https://i.postimg.cc/Gp01r1k1/ong-pp.png" width="28" height="28" alt="PUBGTOTO" layout="fixed"></amp-img>
-      S8TOTO
+      PUBGTOTO
     </a>
     <div class="nb">
-      <a href="https://loginwap.gelapsekali.com/pubg" class="bo">Login</a>
-      <a href="https://daftarwap.gelapsekali.com/pubg" class="bf">Daftar</a>
+      <a href="https://loginwap.gelapsekali.com/pubg" class="bo" target="_blank" rel="noopener nofollow" title="Login PUBGTOTO">Login</a>
+      <a href="https://daftarwap.gelapsekali.com/pubg" class="bf" target="_blank" rel="noopener nofollow" title="Daftar PUBGTOTO">Daftar</a>
     </div>
   </div></nav>
 
   <header class="hero"><div class="w">
-    <div class="badge">S8TOTO &mdash; Platform Resmi 2026</div>
+    <div class="badge">PUBGTOTO &mdash; Situs Resmi 2026</div>
     <h1>PUBGTOTO // Portal Login Tercepat: Arena Battle Royale Penuh Hoki</h1>
-    <p>S8TOTO adalah platform login resmi terpercaya yang menghadirkan putaran angka keberuntungan tanpa henti dengan sistem keamanan berlapis dan akses super cepat sepanjang waktu.</p>
+    <p>PUBGTOTO adalah platform terpercaya dengan akses super cepat, keamanan tingkat tinggi, dan link alternatif yang selalu aktif 24 jam. Daftar gratis sekarang.</p>
     <div class="hb">
-      <a href="https://daftarwap.gelapsekali.com/pubg" class="p">DAFTAR &rarr;</a>
-      <a href="https://loginwap.gelapsekali.com/pubg" class="s">LOGIN</a>
+      <a href="https://daftarwap.gelapsekali.com/pubg" class="p" target="_blank" rel="noopener nofollow" title="Daftar Sekarang PUBGTOTO">DAFTAR &rarr;</a>
+      <a href="https://loginwap.gelapsekali.com/pubg" class="s" target="_blank" rel="noopener nofollow" title="Login Akun PUBGTOTO">LOGIN</a>
     </div>
     <div class="stats">
       <div><span class="v">99.9%</span><span class="l">Uptime</span></div>
       <div><span class="v">24/7</span><span class="l">Support</span></div>
-      <div><span class="v">500K+</span><span class="l">Member</span></div>
+      <div><span class="v">1M+</span><span class="l">Users</span></div>
     </div>
   </div></header>
 
@@ -121,17 +126,20 @@
 
     <section class="sec">
       <span class="tag">Fitur</span>
-      <h2>Keunggulan S8TOTO</h2>
-      <div class="fc"><div class="i">&#9889;</div><div><h3>Akses Super Cepat</h3><p>Server premium dengan loading instan tanpa delay.</p></div></div>
-      <div class="fc"><div class="i">&#128274;</div><div><h3>Keamanan Berlapis</h3><p>Enkripsi SSL 256-bit melindungi seluruh data Anda.</p></div></div>
-      <div class="fc"><div class="i">&#128241;</div><div><h3>Mobile Friendly</h3><p>Tampilan responsif sempurna di semua perangkat.</p></div></div>
+      <h2>Keunggulan PUBGTOTO</h2>
+      <div class="fc"><div class="i">&#9889;</div><div><h3>Akses Super Cepat</h3><p>Server berperforma tinggi memastikan loading dalam hitungan detik.</p></div></div>
+      <div class="fc"><div class="i">&#128274;</div><div><h3>Keamanan Berlapis</h3><p>Enkripsi SSL 256-bit dan proteksi DDoS tingkat enterprise.</p></div></div>
+      <div class="fc"><div class="i">&#128241;</div><div><h3>Mobile Responsive</h3><p>Tampilan otomatis menyesuaikan di semua perangkat.</p></div></div>
+      <div class="fc"><div class="i">&#128279;</div><div><h3>Link Alternatif</h3><p>Banyak link alternatif resmi yang selalu diperbarui.</p></div></div>
+      <div class="fc"><div class="i">&#127919;</div><div><h3>Tampilan Modern</h3><p>Desain antarmuka clean dan intuitif untuk kemudahan navigasi.</p></div></div>
+      <div class="fc"><div class="i">&#128172;</div><div><h3>Layanan 24 Jam</h3><p>Tim customer service siap membantu kapan saja.</p></div></div>
     </section>
 
     <section class="sec">
       <span class="tag">Tentang</span>
-      <h2>Mengapa S8TOTO?</h2>
-      <p>S8TOTO hadir sebagai platform digital terpercaya dengan infrastruktur server modern dan keamanan berlapis. Setiap koneksi dilindungi enkripsi tingkat tinggi untuk menjamin keamanan data dan kenyamanan pengguna sepanjang waktu.</p>
-      <p>Didukung tim profesional yang siap melayani 24/7, S8TOTO terus berinovasi menghadirkan pengalaman akses terbaik dengan link yang selalu aktif dan performa yang konsisten untuk seluruh member.</p>
+      <h2>Mengapa PUBGTOTO?</h2>
+      <p>PUBGTOTO di situs resmi PUBGTOTO dibangun di atas fondasi teknologi yang kokoh dan terpercaya. Seperti proyek konstruksi megah yang dikerjakan oleh tenaga ahli, platform PUBGTOTO dirancang oleh tim engineer berpengalaman dengan standar kualitas tertinggi. Setiap lapisan keamanan dibangun dengan presisi, menghasilkan struktur digital yang tahan terhadap berbagai ancaman.</p>
+      <p>Blueprint keunggulan PUBGTOTO melalui situs resmi PUBGTOTO mencakup enkripsi SSL 256-bit sebagai pondasi keamanan, server premium sebagai rangka struktural dengan uptime 99,9%, dan link alternatif sebagai akses darurat yang selalu siap. Tim konstruksi support kami bekerja 24/7, melakukan maintenance dan perbaikan untuk memastikan platform selalu dalam kondisi prima.</p>
     </section>
 
     <section class="sec">
@@ -139,20 +147,24 @@
       <h2>Pertanyaan Umum</h2>
       <amp-accordion animate expand-single-section disable-session-states>
         <section>
-          <h3><div class="fh">Bagaimana cara login S8TOTO?<span class="ch">+</span></div></h3>
-          <div class="fb"><p>Kunjungi halaman login resmi, masukkan username dan password, lalu klik Login untuk masuk ke akun Anda.</p></div>
+          <h3><div class="fh">Bagaimana cara login PUBGTOTO?<span class="ch">+</span></div></h3>
+          <div class="fb"><p>Kunjungi halaman login resmi di situs resmi PUBGTOTO, masukkan username dan password, lalu klik Login.</p></div>
         </section>
         <section>
-          <h3><div class="fh">Apakah S8TOTO aman?<span class="ch">+</span></div></h3>
-          <div class="fb"><p>Ya, kami menggunakan enkripsi SSL 256-bit dan proteksi keamanan berlapis untuk melindungi data Anda.</p></div>
+          <h3><div class="fh">Apakah PUBGTOTO aman?<span class="ch">+</span></div></h3>
+          <div class="fb"><p>Ya, kami menggunakan enkripsi SSL 256-bit dan proteksi keamanan berlapis tingkat enterprise.</p></div>
         </section>
         <section>
-          <h3><div class="fh">Bisa akses dari HP?<span class="ch">+</span></div></h3>
-          <div class="fb"><p>Tentu, situs kami dioptimalkan untuk semua perangkat mobile Android dan iOS.</p></div>
+          <h3><div class="fh">Bisa akses dari smartphone?<span class="ch">+</span></div></h3>
+          <div class="fb"><p>Tentu, PUBGTOTO dioptimalkan untuk semua perangkat mobile dengan tampilan responsif.</p></div>
         </section>
         <section>
-          <h3><div class="fh">Apakah gratis mendaftar?<span class="ch">+</span></div></h3>
-          <div class="fb"><p>Ya, pendaftaran sepenuhnya gratis tanpa biaya tersembunyi apapun.</p></div>
+          <h3><div class="fh">Berapa lama proses daftar?<span class="ch">+</span></div></h3>
+          <div class="fb"><p>Proses pendaftaran kurang dari 2 menit, sangat cepat dan mudah.</p></div>
+        </section>
+        <section>
+          <h3><div class="fh">Ada link alternatif?<span class="ch">+</span></div></h3>
+          <div class="fb"><p>Ya, tersedia beberapa link alternatif resmi yang selalu aktif dan diperbarui.</p></div>
         </section>
       </amp-accordion>
     </section>
@@ -160,14 +172,14 @@
   </div></main>
 
   <section class="cta"><div class="w">
-    <h2>Gabung <span>S8TOTO</span> Sekarang</h2>
-    <p>Daftar gratis dan rasakan pengalaman premium tanpa batas.</p>
-    <a href="https://daftarwap.gelapsekali.com/pubg" class="cb">DAFTAR GRATIS &rarr;</a>
+    <h2>Bergabung dengan <span>PUBGTOTO</span> Sekarang!</h2>
+    <p>Daftar gratis dan rasakan layanan premium tanpa batas.</p>
+    <a href="https://daftarwap.gelapsekali.com/pubg" class="cb" target="_blank" rel="noopener nofollow" title="Daftar Gratis PUBGTOTO">DAFTAR GRATIS &rarr;</a>
   </div></section>
 
   <footer><div class="w">
-    <div class="fb2">S8TOTO</div>
-    <p>&copy; 2026 S8TOTO. s8totowapterbaru.com</p>
+    <div class="fb2">PUBGTOTO</div>
+    <p>&copy; 2026 PUBGTOTO. pubgtotolinkalternatif.com</p>
   </div></footer>
 
 </body>
